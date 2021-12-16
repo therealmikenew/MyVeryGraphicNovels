@@ -8,8 +8,8 @@ const Book = new Schema(
     publisher: { type: String, required: true },
     volume: { type: Number, required: false },
     description: { type: String, required: true },
-    genre: { type: String, required: true },
-    comments: { type: String, required: true },
+    genre: { type: Array, required: true },
+    comments: { type: String, required: false },
   },
   { timestamps: true }
 );

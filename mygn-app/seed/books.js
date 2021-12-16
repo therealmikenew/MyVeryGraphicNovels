@@ -1,5 +1,5 @@
 const db = require("../db");
-const Book = require("../models/book");
+const { Book, Comment } = require("../models");
 
 // Connect to the database
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
@@ -43,8 +43,6 @@ const main = async () => {
       comments: "",
     },
   ];
-
-  console.log("working?");
 
   await Book.insertMany(books);
 
