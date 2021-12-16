@@ -36,4 +36,4 @@
 
 ## **_Credits_**
 
-Image from [Vulture](https://www.vulture.com/2015/10/will-eisner-graphic-novels-paul-levitz.html)
+Art by Will Eisner; from [Vulture](https://www.vulture.com/2015/10/will-eisner-graphic-novels-paul-levitz.html)
