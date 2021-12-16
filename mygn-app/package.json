@@ -9,6 +9,7 @@
     "body-parser": "^1.19.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "mongoose": "^6.1.2",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.15",
     "react": "^17.0.2",
@@ -40,5 +41,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
