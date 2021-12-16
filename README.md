@@ -12,16 +12,16 @@
 
 ### **_Description_**
 
-#### My Very Graphic Novels is an application where users can search a curated and robust database of mainstream, independent, and international graphic novels. After users create an account, they can create wish lists for graphic novels they want read and also keep an inventory graphic novels they own or have read.
+#### My Very Graphic Novels is an application where users can discover new graphic novels and comic books. After users create an account, they can search a curated and robust database of mainstream, independent, and international graphic novels and comic books. Also, users can create wish lists for graphic novels and comic books they want read and keep an inventory of what they own or have read.
 
 
 
 ### **_Technologies Used_**
 
  - MongoDB
- - Express
- - React
- - Node
+ - Express.js
+ - React.js
+ - Node.js
 
 ---
 
