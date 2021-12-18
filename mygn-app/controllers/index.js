@@ -10,9 +10,9 @@ const getAllBooks = async (req, res) => {
   }
 };
 
-const getByGenre = async (req, res, gen) => {
+const getByGenre = async (req, res) => {
   try {
-    let gen = "horror";
+    let gen = req.params.genre;
     const genre = await Book.find({ genre: gen });
     return res.status(200).json({ genre });
   } catch (error) {

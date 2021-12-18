@@ -6,6 +6,6 @@ router.get("/", (req, res) => res.send("ROOT"));
 
 router.get("/books", controllers.getAllBooks);
 
-router.get("/books/genre", controllers.getByGenre);
+router.get("/books/genre/:genre", controllers.getByGenre);
 
 module.exports = router;
