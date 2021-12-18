@@ -1,16 +1,11 @@
-
-
 import axios from 'axios'
 import React, {useState} from 'react'
 import SearchResults from './SearchResults'
 
-
-
-export default function Search() {
-
+export default function Search(props) {
+    
     const [selectedGenre, setSelectedGenre] = useState({value: "superhero"})
     const [displayGenre, setDisplayGenre] = useState([])
-
 
     const handleChange = (e) => {
         setSelectedGenre({value: e.target.value})
@@ -20,11 +15,8 @@ export default function Search() {
       e.preventDefault()
       let val = Object.values(selectedGenre)
       const resp = await axios.get(`http://localhost:3001/api/books/genre/${val}`)
-      console.log(resp.data.genre)
-      setDisplayGenre(resp.data.genre)
-      
+      setDisplayGenre(resp.data.genre)    
     }
-
 
     return (
         <div>
@@ -39,21 +31,11 @@ export default function Search() {
                 <option value="documentary">documentary</option>
                 <option value="suspense">suspense</option>
             </select >
-                <button type='submit' >Search</button>
+                <button type='submit'>Search</button>
             </form>
-
             <div>
-                <SearchResults displayGenre={displayGenre}/>
-
-
-
-            </div>
-
-            
-
-           
-
-            
+                <SearchResults displayGenre={displayGenre} props={props} />
+            </div> 
         </div>
     )
 }
