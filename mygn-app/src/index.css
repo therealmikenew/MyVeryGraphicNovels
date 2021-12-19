@@ -27,3 +27,14 @@ img {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+.book-card-detail {
+  border: 1px solid black;
+  width: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.nav-links {
+  padding: 20px;
+}

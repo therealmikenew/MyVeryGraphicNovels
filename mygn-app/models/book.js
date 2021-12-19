@@ -10,6 +10,7 @@ const Book = new Schema(
     description: { type: String, required: true },
     genre: { type: String, required: true },
     comments: { type: String, required: false },
+    onWishList: { type: Boolean, required: true },
   },
   { timestamps: true }
 );

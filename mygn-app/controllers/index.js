@@ -22,10 +22,27 @@ const getByGenre = async (req, res) => {
 
 const getById = async (req, res) => {
   try {
-    //res.send(console.log(req.params.id));
     let id = req.params.id;
     const bookID = await Book.findById(id);
     return res.status(200).json({ bookID });
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+};
+
+const getWishList = async (req, res) => {
+  try {
+    const wishList = await Book.find({ onWishList: true });
+    return res.status(200).json({ wishList });
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+};
+
+const updateWishList = async (req, res) => {
+  try {
+    let id = req.params.id;
+    await Book.findByIdAndUpdate(id, req.body, { new: true });
   } catch (error) {
     return res.status(500).send(error.message);
   }
@@ -35,4 +52,6 @@ module.exports = {
   getAllBooks,
   getByGenre,
   getById,
+  getWishList,
+  updateWishList,
 };

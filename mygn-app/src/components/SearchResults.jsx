@@ -1,10 +1,8 @@
 import React from 'react'
 
 export default function SearchResults(props) {
-    //console.log("from search results: ",props)
   
     const showBook = (id) => {
-        console.log(props.props)
         props.props.history.push(`/details/${id}`)
     }
 
@@ -14,7 +12,7 @@ export default function SearchResults(props) {
                 <div key={idx} className="book-card" onClick={() => showBook(book._id)}>
                     <h3>{book.title}</h3>
                     <img src={book.image} alt={book.name} />
-                    <p>Add to Wish List</p>
+                    <p>{book.onWishList ? "Remove from Wish List" : "Add to Wish List"}</p>
                     <p>Add to Inventory</p>
                 </div>
             ))}    

@@ -8,7 +8,6 @@ export default function BookDetails(props) {
     const displayDetails = async () => {
         const resp = await axios.get(`http://localhost:3001/api/books/${props.match.params.id}`)
         let bookDetails = resp.data.bookID
-        console.log("Book details:", bookDetails)
         setBookData(bookDetails)
     }
 
@@ -17,13 +16,13 @@ export default function BookDetails(props) {
     }, [])
 
     
-    return (<div>
+    return (<div  >
 
-                <div >
+            <div className='book-card-detail'>
                 <h3>{bookData.title}</h3>
                 <img src={bookData.image} alt={bookData.title} />
                 <p>{bookData.description}</p>
-                <p>Add to Wish List</p>
+                <p>{bookData.onWishList ? "Remove from Wish List" : "Add to Wish List"}</p>
                 <p>Add to Inventory</p>
             </div>
 
