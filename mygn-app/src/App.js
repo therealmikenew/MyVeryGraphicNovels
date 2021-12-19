@@ -7,7 +7,6 @@ import Search from "./components/Search";
 import WishList from "./components/WishList";
 import Inventory from "./components/Inventory";
 import BookDetails from "./components/BookDetails";
-// import SearchResults from "./components/SearchResults";
 
 function App() {
   return (
@@ -19,11 +18,6 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />
         <Route exact path="/search" component={Search} />
-        {/* <Route
-          path="/searchresults"
-          component={(props) => <SearchResults {...props} />}
-        /> */}
-
         <Route
           path="/details/:id"
           component={(props) => <BookDetails {...props} />}

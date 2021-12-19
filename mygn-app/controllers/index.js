@@ -20,7 +20,19 @@ const getByGenre = async (req, res) => {
   }
 };
 
+const getById = async (req, res) => {
+  try {
+    //res.send(console.log(req.params.id));
+    let id = req.params.id;
+    const bookID = await Book.findById(id);
+    return res.status(200).json({ bookID });
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+};
+
 module.exports = {
   getAllBooks,
   getByGenre,
+  getById,
 };

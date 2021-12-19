@@ -1,28 +1,32 @@
-import React from 'react'
+import axios from 'axios'
+import React, {useState, useEffect } from 'react'
 
 export default function BookDetails(props) {
-    console.log("from bookdetails", props)
-    // const[selectedBook, setSelectedBook] = useState("")
+    const [bookData, setBookData] = useState("")
+    
 
-    // console.log("from bookdetails", props)
+    const displayDetails = async () => {
+        const resp = await axios.get(`http://localhost:3001/api/books/${props.match.params.id}`)
+        let bookDetails = resp.data.bookID
+        console.log("Book details:", bookDetails)
+        setBookData(bookDetails)
+    }
 
-    // useEffect(()=> {
-    //     let selectedBook = props.displayGenre.find(
-    //         (book) => book._id === parseInt(props.match.params.id)
-    //     )
-    //     setSelectedBook(selectedBook)
-    // },[props.displayGenre, props.match.params.id])
+    useEffect(() => {
+        displayDetails()
+    }, [])
 
     
-    return (<div>TEST
-{/* 
-                    <div className="book-card">
-                    <h3>{book.title}</h3>
-                    <img src={book.image} alt={book.name} />
-                    <p>Add to Wish List</p>
-                    <p>Add to Inventory</p>
-                </div>
- */}
+    return (<div>
+
+                <div >
+                <h3>{bookData.title}</h3>
+                <img src={bookData.image} alt={bookData.title} />
+                <p>{bookData.description}</p>
+                <p>Add to Wish List</p>
+                <p>Add to Inventory</p>
+            </div>
+
 
 
 
