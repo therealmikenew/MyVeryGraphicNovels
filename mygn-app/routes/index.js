@@ -12,6 +12,6 @@ router.get("/books/:id", controllers.getById);
 
 router.get("/wishlist", controllers.getWishList);
 
-router.put("/wishlist/:id", controllers.updateWishList);
+router.put("/wishlist/:id/:onWishList", controllers.updateWishList);
 
 module.exports = router;

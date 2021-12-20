@@ -42,7 +42,9 @@ const getWishList = async (req, res) => {
 const updateWishList = async (req, res) => {
   try {
     let id = req.params.id;
-    await Book.findByIdAndUpdate(id, { onWishList: false });
+    let added = req.params.onWishList;
+
+    await Book.findByIdAndUpdate(id, { onWishList: added });
   } catch (error) {
     return res.status(500).send(error.message);
   }
