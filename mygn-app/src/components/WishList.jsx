@@ -1,9 +1,12 @@
 import axios from "axios"
 import React, {useState, useEffect} from 'react'
 
-export default function WishList() {
 
+
+export default function WishList(props) {
+    
     const [showWishList, setShowWishList] = useState([])
+    
 
     const displayWishList = async () => {
         const resp = await axios.get(`http://localhost:3001/api/wishlist`)
@@ -12,7 +15,10 @@ export default function WishList() {
 
     useEffect(() => {
         displayWishList()
-    },[showWishList] )
+    },[] )
+
+ 
+
 
     return (
         <div>
@@ -22,6 +28,10 @@ export default function WishList() {
                 <div key={idx} className="book-card">
                     <h3>{book.title}</h3>
                     <img src={book.image} alt={book.name} />
+                    <div>COMMENTS HERE</div>
+
+                
+                    
                     <p>Remove from Wish List</p>
                     <p>Remove from Inventory</p>
                 </div>

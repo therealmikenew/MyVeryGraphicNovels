@@ -3,14 +3,13 @@ import React from 'react'
 
 export default function SearchResults(props) {
 
- 
     const showBook = (id) => {
         props.props.history.push(`/details/${id}`)
     }
 
     const toggleWishList = async (id, onWishList) => {
-        await axios.put(`http://localhost:3001/api/wishlist/${id}/${!onWishList}`)
 
+        await axios.put(`http://localhost:3001/api/wishlist/${id}/${!onWishList}`)
         }
 
 

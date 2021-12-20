@@ -1,4 +1,4 @@
-const { Book } = require("../models/");
+const { Book, Comment } = require("../models/");
 
 const getAllBooks = async (req, res) => {
   try {
@@ -44,7 +44,8 @@ const updateWishList = async (req, res) => {
     let id = req.params.id;
     let added = req.params.onWishList;
 
-    await Book.findByIdAndUpdate(id, { onWishList: added });
+    const wish = await Book.findByIdAndUpdate(id, { onWishList: added });
+    return res.status(200).send("success");
   } catch (error) {
     return res.status(500).send(error.message);
   }
@@ -69,6 +70,17 @@ const updateInventory = async (req, res) => {
   }
 };
 
+const postComment = async (req, res) => {
+  try {
+    const comment = await new Comment(req.body);
+    console.log(comment);
+    await comment.save();
+    return res.status(201).json({ comment });
+  } catch (error) {
+    return res.status(500).json({ error: error.message });
+  }
+};
+
 module.exports = {
   getAllBooks,
   getByGenre,
@@ -77,4 +89,5 @@ module.exports = {
   updateWishList,
   getInventory,
   updateInventory,
+  postComment,
 };

@@ -13,7 +13,7 @@ export default function Inventory() {
     useEffect(()=> {
       
         displayInventory()
-    }, [showInventory])
+    }, [])
 
 
     return (

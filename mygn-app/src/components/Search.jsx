@@ -34,7 +34,7 @@ export default function Search(props) {
                 <button type='submit'>Search</button>
             </form>
             <div>
-                <SearchResults displayGenre={displayGenre} props={props}/>
+                <SearchResults displayGenre={displayGenre} props={props} selectedGenre={selectedGenre} handleSubmit={handleSubmit}/>
             </div> 
         </div>
     )

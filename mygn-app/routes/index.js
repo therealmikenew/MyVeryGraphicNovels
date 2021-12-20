@@ -18,4 +18,6 @@ router.get("/inventory", controllers.getInventory);
 
 router.put("/inventory/:id/:onInventory", controllers.updateInventory);
 
+router.post("/wishlist/comment", controllers.postComment);
+
 module.exports = router;

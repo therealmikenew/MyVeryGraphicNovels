@@ -22,7 +22,10 @@ function App() {
           path="/details/:id"
           component={(props) => <BookDetails {...props} />}
         />
-        <Route exact path="/wishlist" component={WishList} />
+        <Route
+          path="/wishlist"
+          component={(props) => <WishList {...props} />}
+        />
         <Route exact path="/inventory" component={Inventory} />
       </Switch>
     </div>
