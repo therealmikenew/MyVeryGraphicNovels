@@ -49,6 +49,25 @@ const updateWishList = async (req, res) => {
     return res.status(500).send(error.message);
   }
 };
+const getInventory = async (req, res) => {
+  try {
+    const inventory = await Book.find({ onInventory: true });
+    return res.status(200).json({ inventory });
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+};
+
+const updateInventory = async (req, res) => {
+  try {
+    let id = req.params.id;
+    let added = req.params.onInventory;
+
+    await Book.findByIdAndUpdate(id, { onInventory: added });
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+};
 
 module.exports = {
   getAllBooks,
@@ -56,4 +75,6 @@ module.exports = {
   getById,
   getWishList,
   updateWishList,
+  getInventory,
+  updateInventory,
 };

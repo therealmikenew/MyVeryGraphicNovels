@@ -11,6 +11,7 @@ const Book = new Schema(
     genre: { type: String, required: true },
     comments: { type: String, required: false },
     onWishList: { type: Boolean, required: true },
+    onInventory: { type: Boolean, required: true },
   },
   { timestamps: true }
 );

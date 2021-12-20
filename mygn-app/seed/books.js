@@ -15,9 +15,10 @@ const main = async () => {
       volume: "",
       description:
         "From Hugo Award-winning writer Tom King and artist Mitch Gerads, the team behind THE SHERIFF OF BABYLON, comes an ambitious new take on one of Jack Kirby's most beloved New Gods in MISTER MIRACLE! One of the best-reviewed series of the year and already a classic in the making, this Mister Miracle is magical, dark, intimate and unlike anything you've read before.",
-      genre: "fantasy",
+      genre: "superhero",
       comments: "",
       onWishList: false,
+      onInventory: false,
     },
     {
       title: "The Vision",
@@ -28,9 +29,10 @@ const main = async () => {
       volume: 1,
       description:
         "The Vision wants to be human, and what's more human than family? So he heads back to the beginning, to the laboratory where Ultron created him and molded him into a weapon. The place where he first rebelled against his given destiny, and imagined he could be more — that he could be a man. There, he builds them. A wife, Virginia. Two teenage twins, Viv and Vin. They look like him. They have his powers. They share his grandest ambition (or is that obsession?): the unrelenting need to be ordinary. Behold the Visions! They're the family next door, and they have the power to kill us all. What could possibly go wrong? Artificial hearts will be broken, bodies will not stay buried, the truth will not remain hidden, and the Vision will never be the same.",
-      genre: "fantasy",
+      genre: "superhero",
       comments: "",
       onWishList: false,
+      onInventory: false,
     },
     {
       title: "The Vision",
@@ -41,9 +43,10 @@ const main = async () => {
       volume: 2,
       description:
         "The epic conclusion of the story that everyone is talking about! Once upon a time, a robot and a witch fell in love. But the story of Scarlet Witch and Vision was just the start. Vision has built a new life for himself — a new family. Yet while every family has its share of skeletons in the closet, for the Visions those skeletons are real. And now the family's facade is crumbling. The Avengers know the truth. That Vision's wife has killed. That the synthezoid lied to protect her. And that lie will follow lie, death will pile upon death. The Avengers know they need to act. Tragedy is coming, and it will send the Android Avenger into a devastating confrontation with Earth's Mightiest Heroes. Nobody is safe.",
-      genre: "fantasy",
+      genre: "superhero",
       comments: "",
       onWishList: false,
+      onInventory: false,
     },
     {
       title: "The Meat Cake Bible",
@@ -57,6 +60,7 @@ const main = async () => {
       genre: "indie",
       comments: "",
       onWishList: false,
+      onInventory: false,
     },
     {
       title: "The Complete Maus",
@@ -70,6 +74,7 @@ const main = async () => {
       genre: "documentary",
       comments: "",
       onWishList: false,
+      onInventory: false,
     },
     {
       title: "Ojo",
@@ -83,6 +88,7 @@ const main = async () => {
       genre: "horror",
       comments: "",
       onWishList: false,
+      onInventory: false,
     },
     {
       title: "Sentient",
@@ -96,6 +102,7 @@ const main = async () => {
       genre: "suspense",
       comments: "",
       onWishList: false,
+      onInventory: false,
     },
     {
       title: "My Favorite Thing Is Monsters",
@@ -109,6 +116,49 @@ const main = async () => {
       genre: "fantasy",
       comments: "",
       onWishList: false,
+      onInventory: false,
+    },
+    {
+      title: "Promethea",
+      image:
+        "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1436628635l/821800._SY475_.jpg",
+      author: "Moore, Alan",
+      publisher: "America's Best Comics",
+      volume: 1,
+      description:
+        "Sophie Bangs was a just an ordinary college student in a weirdly futuristic New York when a simple assignment changed her life forever. While researching Promethea, a mythical warrior woman, Sophie receives a cryptic warning to cease her investigations. Ignoring the cautionary notice, she continues her studies and is almost killed by a shadowy creature when she learns the secret of Promethea. Surviving the encounter, Sophie soon finds herself transformed into Promethea, the living embodiment of the imagination. Her trials have only begun as she must master the secrets of her predecessors before she is destroyed by Promethea's ancient enemy. It's a stellar piece of work recommended by General Assembly's own Jeremy Taubman!",
+      genre: "fantasy",
+      comments: "",
+      onWishList: false,
+      onInventory: false,
+    },
+    {
+      title: "We3",
+      image:
+        "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1336056522l/22358.jpg",
+      author: "Morrison, Grant",
+      publisher: "Vertigo",
+      volume: null,
+      description:
+        "Writer Grant Morrison and artist Frank Quitely tell the unforgettable story of three innocent pets-a dog, a cat and a rabbit-who have been converted into deadly cyborgs by a sinister military weapons program.With nervous systems amplified to match their terrifying mechanical exoskeletons, the members of Animal Weapon 3 have the firepower of a battalion between them. But they are just the program's prototypes, and now that their testing is complete, they're slated to be permanently 'de-commissioned'-until they seize their one chance to make a desperate run for freedom. Relentlessly pursued by their makers, the We3 team must navigate a frightening and confusing world where their instincts and heightened abilities make them as much a threat as those hunting them-but a world, nonetheless, in which somewhere there is something called 'home.'",
+      genre: "suspense",
+      comments: "",
+      onWishList: false,
+      onInventory: false,
+    },
+    {
+      title: "Fun Home: A Family Tragicomic",
+      image:
+        "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1440097020l/26135825._SY475_.jpg",
+      author: "Bechdel, Alison",
+      publisher: "Mariner Books",
+      volume: null,
+      description:
+        "Distant and exacting, Bruce Bechdel was an English teacher and director of the town funeral home, which Alison and her family referred to as the Fun Home. It was not until college that Alison, who had recently come out as a lesbian, discovered that her father was also gay. A few weeks after this revelation, he was dead, leaving a legacy of mystery for his daughter to resolve.",
+      genre: "documentary",
+      comments: "",
+      onWishList: false,
+      onInventory: false,
     },
   ];
 

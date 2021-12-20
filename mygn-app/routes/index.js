@@ -14,4 +14,8 @@ router.get("/wishlist", controllers.getWishList);
 
 router.put("/wishlist/:id/:onWishList", controllers.updateWishList);
 
+router.get("/inventory", controllers.getInventory);
+
+router.put("/inventory/:id/:onInventory", controllers.updateInventory);
+
 module.exports = router;

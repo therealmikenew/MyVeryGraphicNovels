@@ -12,7 +12,7 @@ export default function WishList() {
 
     useEffect(() => {
         displayWishList()
-    }, )
+    },[showWishList] )
 
     return (
         <div>
