@@ -70,6 +70,8 @@ const updateInventory = async (req, res) => {
   }
 };
 
+//////////////COMMENTS//////////
+
 const postComment = async (req, res) => {
   try {
     const comment = await new Comment(req.body);
@@ -78,6 +80,26 @@ const postComment = async (req, res) => {
     return res.status(201).json({ comment });
   } catch (error) {
     return res.status(500).json({ error: error.message });
+  }
+};
+
+const getAllComments = async (req, res) => {
+  try {
+    const comments = await Comment.find();
+
+    return res.status(200).json({ comments });
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+};
+
+const getCommentsById = async (req, res) => {
+  try {
+    let bookID = req.params.id;
+    const commentID = await Comment.find({ book_id: bookID });
+    return res.status(200).json({ commentID });
+  } catch (error) {
+    return res.status(500).send(error.message);
   }
 };
 
@@ -90,4 +112,6 @@ module.exports = {
   getInventory,
   updateInventory,
   postComment,
+  getAllComments,
+  getCommentsById,
 };

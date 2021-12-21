@@ -6,9 +6,13 @@ router.get("/", (req, res) => res.send("ROOT"));
 
 router.get("/books", controllers.getAllBooks);
 
+router.get("/comments", controllers.getAllComments);
+
 router.get("/books/genre/:genre", controllers.getByGenre);
 
 router.get("/books/:id", controllers.getById);
+
+router.get("/comments/:id", controllers.getCommentsById);
 
 router.get("/wishlist", controllers.getWishList);
 

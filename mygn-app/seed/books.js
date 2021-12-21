@@ -155,6 +155,34 @@ const main = async () => {
       volume: null,
       description:
         "Distant and exacting, Bruce Bechdel was an English teacher and director of the town funeral home, which Alison and her family referred to as the Fun Home. It was not until college that Alison, who had recently come out as a lesbian, discovered that her father was also gay. A few weeks after this revelation, he was dead, leaving a legacy of mystery for his daughter to resolve.",
+      genre: "indie",
+      comments: "",
+      onWishList: false,
+      onInventory: false,
+    },
+    {
+      title: "The Incal",
+      image:
+        "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1500033240l/10842223._SX318_.jpg",
+      author: "Jodorowsky, Alejandro",
+      publisher: "Humanoids, Inc",
+      volume: null,
+      description:
+        "John Difool, a low-class detective in a degenerate dystopian world, finds his life turned upside down when he discovers an ancient, mystical artifact called 'The Incal.'' Difool's adventures will bring him into conflict with the galaxy's greatest warrior, the Metabaron, and will pit him against the awesome powers of the Technopope. These encounters and many more make up a tale of comic and cosmic proportions that has Difool fighting for not only his very survival, but also the survival of the entire universe. ",
+      genre: "indie",
+      comments: "",
+      onWishList: false,
+      onInventory: false,
+    },
+    {
+      title: "The Complete Persepolis",
+      image:
+        "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327876995l/991197.jpg",
+      author: "Satrapi, Marjane",
+      publisher: "Pantheon Books",
+      volume: null,
+      description:
+        "Persepolis is the story of Satrapi's unforgettable childhood and coming of age within a large and loving family in Tehran during the Islamic Revolution; of the contradictions between private life and public life in a country plagued by political upheaval; of her high school years in Vienna facing the trials of adolescence far from her family; of her homecoming--both sweet and terrible; and, finally, of her self-imposed exile from her beloved homeland. It is the chronicle of a girlhood and adolescence at once outrageous and familiar, a young life entwined with the history of her country yet filled with the universal trials and joys of growing up. Edgy, searingly observant, and candid, often heartbreaking but threaded throughout with raw humor and hard-earned wisdom--Persepolis is a stunning work from one of the most highly regarded, singularly talented graphic artists at work today.",
       genre: "documentary",
       comments: "",
       onWishList: false,
