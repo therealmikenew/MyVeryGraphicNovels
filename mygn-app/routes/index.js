@@ -24,4 +24,6 @@ router.put("/inventory/:id/:onInventory", controllers.updateInventory);
 
 router.post("/wishlist/comment", controllers.postComment);
 
+router.delete("/comments/:id", controllers.deleteComment);
+
 module.exports = router;

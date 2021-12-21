@@ -103,6 +103,19 @@ const getCommentsById = async (req, res) => {
   }
 };
 
+const deleteComment = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deleted = await Comment.findByIdAndDelete(id);
+    if (deleted) {
+      return res.status(200).send("Comment deleted");
+    }
+    throw new Error("Comment not found");
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+};
+
 module.exports = {
   getAllBooks,
   getByGenre,
@@ -114,4 +127,5 @@ module.exports = {
   postComment,
   getAllComments,
   getCommentsById,
+  deleteComment,
 };

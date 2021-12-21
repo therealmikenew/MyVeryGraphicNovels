@@ -2,8 +2,6 @@ import axios from "axios"
 import React, {useState, useEffect} from 'react'
 
 export default function Comment(props) {
-    console.log(props.bookData._id)
-
     const [getComment, setGetComment] = useState("")
     const [displayComments, setDisplayComments] = useState([])
     const [show, setShow] = useState(false)
@@ -19,7 +17,7 @@ export default function Comment(props) {
         
         const timeout = setTimeout (()=> {
             setShow(true)
-        }, 250)
+        }, 200)
         
 
         return () => clearTimeout(timeout)
@@ -28,26 +26,35 @@ export default function Comment(props) {
 
     if(!show) return null
 
-
     const handleChange = (e) => {
         setGetComment(e.target.value)
     }
 
     const submitComment = async (e) => {
-        
         await axios.post("http://localhost:3001/api/wishlist/comment", {
             body: `${getComment}`,
             book_id: `${props.bookData._id}`,
         })
     }
 
-   
+
+    const deleteComment = async (id) => {
+        await axios.delete(`http://localhost:3001/api/comments/${id}`)
+    }
+
+
+
+
 
 
     return (
         <div>
             <div>
-                {displayComments.map((com, idx)=> (<li key={idx}>{com.body}</li>))}
+                {displayComments.map((com, idx)=> (
+
+                    <div key={idx}><li >{com.body}</li>
+                    <button onClick={()=> deleteComment(com._id)}>remove</button></div>
+                ))}
                 </div> 
              <form onSubmit={submitComment}>
                     <label>Comments</label>
