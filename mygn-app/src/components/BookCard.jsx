@@ -26,8 +26,7 @@ export default function BookCard(props) {
                 <div key={idx} className="book-card" >
                     <h3>{book.title}</h3>
                     <img onClick={() => showBook(book._id)} src={book.image} alt={book.name} />
-                    {/* <button onClick={()=> toggleWishList(book._id, book.onWishList)}>{book.onWishList ? "Remove from Wish List" : "Add to Wish List"}</button>
-                    <button onClick={()=> toggleInventory(book._id, book.onInventory)}>{book.onInventory ? "Remove from Inventory" : "Add to Inventory"}</button> */}
+                  
                 </div>
                 
             ))}    

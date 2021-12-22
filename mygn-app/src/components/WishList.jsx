@@ -4,8 +4,13 @@ import React, {useState, useEffect} from 'react'
 
 
 export default function WishList(props) {
+    console.log(props.history.push)
     
     const [showWishList, setShowWishList] = useState([])
+
+    const showBook = (id) => {
+        props.history.push(`/details/${id}`)
+    }
     
 
     const displayWishList = async () => {
@@ -27,7 +32,7 @@ export default function WishList(props) {
             {showWishList.map((book, idx)=> ( 
                 <div key={idx} className="book-card">
                     <h3>{book.title}</h3>
-                    <img src={book.image} alt={book.name} />
+                    <img onClick={()=> showBook(book._id)}src={book.image} alt={book.name} />
                 </div>
             ))}   
 
