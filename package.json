@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "cd client && rm -rf build && npm install && npm run build",
+    "build": "cd mygn-app && rm -rf build && npm install && npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "nodemon server.js"
