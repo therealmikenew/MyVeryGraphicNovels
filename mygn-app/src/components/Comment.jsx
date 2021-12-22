@@ -9,8 +9,7 @@ export default function Comment(props) {
     const getComments = async () => {
         let res = await axios.get(`http://localhost:3001/api/comments/${props.bookData._id}`)
         setDisplayComments(res.data.commentID)
- }
-
+    }
 
     useEffect(() => {
         getComments()
@@ -19,7 +18,6 @@ export default function Comment(props) {
             setShow(true)
         }, 400)
         
-
         return () => clearTimeout(timeout)
         
     }, [show])
@@ -39,19 +37,15 @@ export default function Comment(props) {
 
 
     const deleteComment = async (id) => {
-        await axios.delete(`http://localhost:3001/api/comments/${id}`)
+        
+       await axios.delete(`http://localhost:3001/api/comments/${id}`)
+ 
     }
-
-
-
-
-
 
     return (
         <div>
             <div>
                 {displayComments.map((com, idx)=> (
-
                     <div key={idx}><li >{com.body}</li>
                     <button onClick={()=> deleteComment(com._id)}>remove</button></div>
                 ))}

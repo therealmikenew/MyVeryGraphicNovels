@@ -1,17 +1,12 @@
 import axios from "axios"
 import React, {useState, useEffect} from 'react'
 
-
-
-export default function WishList(props) {
-    console.log(props.history.push)
-    
+export default function WishList(props) { 
     const [showWishList, setShowWishList] = useState([])
 
     const showBook = (id) => {
         props.history.push(`/details/${id}`)
     }
-    
 
     const displayWishList = async () => {
         const resp = await axios.get(`http://localhost:3001/api/wishlist`)
@@ -22,13 +17,9 @@ export default function WishList(props) {
         displayWishList()
     },[] )
 
- 
-
-
     return (
         <div>
             <h1>Wish List</h1>
-
             {showWishList.map((book, idx)=> ( 
                 <div key={idx} className="book-card">
                     <h3>{book.title}</h3>
