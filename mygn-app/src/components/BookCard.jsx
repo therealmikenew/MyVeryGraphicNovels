@@ -1,23 +1,13 @@
-import axios from 'axios'
-import React, {useState} from 'react'
+
+import React from 'react'
 
 export default function BookCard(props) {
-    const [update, setUpdate] = useState('')
+
     
     const showBook = (id) => {
         props.props.props.history.push(`/details/${id}`)
     }
 
- 
-    const toggleWishList = async (id, onWishList) => {
-       
-        let changeBook = await axios.put(`http://localhost:3001/api/wishlist/${id}/${!onWishList}`)  
-    
-    }
-
-    const toggleInventory = async (id, onInventory) => {
-        await axios.put(`http://localhost:3001/api/inventory/${id}/${!onInventory}`)
-        }
 
 
     return (

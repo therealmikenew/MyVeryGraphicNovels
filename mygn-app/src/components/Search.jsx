@@ -6,6 +6,11 @@ export default function Search(props) {
     
     const [selectedGenre, setSelectedGenre] = useState({value: "superhero"})
     const [displayGenre, setDisplayGenre] = useState([])
+    const [update, setUpdate] = useState(true);
+
+    const toggleUpdate = () => {
+      setUpdate(!update);
+    };
 
     const handleChange = (e) => {
         setSelectedGenre({value: e.target.value})
@@ -34,7 +39,7 @@ export default function Search(props) {
                 <button type='submit'>Search</button>
             </form>
             <div>
-                <SearchResults displayGenre={displayGenre} props={props} selectedGenre={selectedGenre} handleSubmit={handleSubmit}/>
+                <SearchResults displayGenre={displayGenre} props={props} selectedGenre={selectedGenre} handleSubmit={handleSubmit} toggleUpdate={toggleUpdate}/>
             </div> 
         </div>
     )

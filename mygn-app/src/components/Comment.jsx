@@ -2,6 +2,7 @@ import axios from "axios"
 import React, {useState, useEffect} from 'react'
 
 export default function Comment(props) {
+    console.log(props.handleUpdate)
     const [getComment, setGetComment] = useState("")
     const [displayComments, setDisplayComments] = useState([])
     const [show, setShow] = useState(false)
@@ -39,6 +40,7 @@ export default function Comment(props) {
     const deleteComment = async (id) => {
         
        await axios.delete(`http://localhost:3001/api/comments/${id}`)
+       props.handleUpdate()
  
     }
 

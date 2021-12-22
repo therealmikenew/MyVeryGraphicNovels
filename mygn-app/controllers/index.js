@@ -63,13 +63,10 @@ const getInventory = async (req, res) => {
 const updateInventory = async (req, res) => {
   try {
     let id = req.params.id;
-    let added = req.params.onInventory;
+    let added = req.params.status;
+
     let update = await Book.findByIdAndUpdate(id, { onInventory: added });
     return res.status(200).json({ update });
-    // if (update) {
-    //   return res.status(200).send(console.log(update));
-    // }
-    // throw new Error("PUT not found");
   } catch (error) {
     return res.status(500).send(error.message);
   }

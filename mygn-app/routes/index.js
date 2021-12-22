@@ -20,7 +20,7 @@ router.put("/wishlist/:id/:onWishList", controllers.updateWishList);
 
 router.get("/inventory", controllers.getInventory);
 
-router.put("/inventory/:id/:onInventory", controllers.updateInventory);
+router.put("/inventory/:id/:status", controllers.updateInventory);
 
 router.post("/wishlist/comment", controllers.postComment);
 
