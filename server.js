@@ -3,7 +3,7 @@ const routes = require("./routes/index");
 const logger = require("morgan");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-// const db = require("../backend/db");
+const db = require("./db");
 const path = require("path");
 
 const PORT = process.env.PORT || 3001;
