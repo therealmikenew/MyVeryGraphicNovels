@@ -1,4 +1,5 @@
 import axios from "axios"
+import globals, { BASE_URL } from "../globals"
 import React, {useState, useEffect} from 'react'
 
 export default function Comment(props) {
@@ -8,7 +9,7 @@ export default function Comment(props) {
     const [show, setShow] = useState(false)
 
     const getComments = async () => {
-        let res = await axios.get(`http://localhost:3001/api/comments/${props.bookData._id}`)
+        let res = await axios.get(`${BASE_URL}/comments/${props.bookData._id}`)
         setDisplayComments(res.data.commentID)
     }
 

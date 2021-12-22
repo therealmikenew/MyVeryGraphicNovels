@@ -1,4 +1,5 @@
 import axios from 'axios'
+import globals, { BASE_URL } from "../globals"
 import React, {useState, useEffect } from 'react'
 import Comment from '../components/Comment'
 
@@ -10,7 +11,7 @@ export default function BookDetails(props) {
  
 
     const displayDetails = async () => {
-        const resp = await axios.get(`http://localhost:3001/api/books/${props.match.params.id}`)
+        const resp = await axios.get(`${BASE_URL}/books/${props.match.params.id}`)
         setBookData(resp.data.bookID)
     }
 
@@ -32,13 +33,13 @@ export default function BookDetails(props) {
      if(!show) return null
 
     const toggleWishList = async (id, onWishList) => {  
-        let changeBook = await axios.put(`http://localhost:3001/api/wishlist/${id}/${!onWishList}`)  
+        let changeBook = await axios.put(`${BASE_URL}/wishlist/${id}/${!onWishList}`)  
         setWishListStatus(changeBook.data.wish.onWishList)
         props.handleUpdate()
     }
 
     const toggleInventory = async (id, onInventory) => {
-        let changeBook = await axios.put(`http://localhost:3001/api/inventory/${id}/${!onInventory}`)
+        let changeBook = await axios.put(`${BASE_URL}/inventory/${id}/${!onInventory}`)
         //console.log("front end:", onInventory, "backend:", changeBook.data.update.onInventory)
         setInventoryStatus(changeBook.data.update.onInventory)
         props.handleUpdate()   

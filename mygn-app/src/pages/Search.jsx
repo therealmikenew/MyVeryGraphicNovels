@@ -1,4 +1,5 @@
 import axios from 'axios'
+import globals, { BASE_URL } from "../globals"
 import React, {useState} from 'react'
 import SearchResults from "../components/SearchResults"
 import RandomResult from "../components/RandomResult"
@@ -22,17 +23,17 @@ export default function Search(props) {
     const handleSubmit = async (e) => {
       e.preventDefault()
       let val = Object.values(selectedGenre)
-      const resp = await axios.get(`http://localhost:3001/api/books/genre/${val}`)
+      const resp = await axios.get(`${BASE_URL}/books/genre/${val}`)
       setDisplayGenre(resp.data.genre)    
     }
 
     const randomFind = async (e) => {
         e.preventDefault()
-        let random = await axios.get("http://localhost:3001/api/books")
+        let random = await axios.get(`${BASE_URL}/books`)
         let randomArr = random.data.books
         let newArr = randomArr.map((book)=> ((book._id)))
         let test = newArr[Math.floor(Math.random() * newArr.length)]
-        let testone = await axios.get(`http://localhost:3001/api/books/${test}`)
+        let testone = await axios.get(`${BASE_URL}/books/${test}`)
         setDisplayRandom(testone.data.bookID)
     }
 

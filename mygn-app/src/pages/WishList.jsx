@@ -1,4 +1,5 @@
 import axios from "axios"
+import globals, { BASE_URL } from "../globals"
 import React, {useState, useEffect} from 'react'
 
 export default function WishList(props) { 
@@ -9,7 +10,7 @@ export default function WishList(props) {
     }
 
     const displayWishList = async () => {
-        const resp = await axios.get(`http://localhost:3001/api/wishlist`)
+        const resp = await axios.get(`${BASE_URL}/wishlist`)
         setShowWishList(resp.data.wishList)     
     }
 

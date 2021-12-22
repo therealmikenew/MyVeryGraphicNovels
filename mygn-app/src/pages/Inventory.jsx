@@ -1,4 +1,5 @@
 import axios from "axios"
+import globals, { BASE_URL } from "../globals"
 import React, {useState, useEffect} from 'react'
 
 export default function Inventory(props) {
@@ -9,7 +10,7 @@ export default function Inventory(props) {
     }
 
     const displayInventory = async () => {
-        const resp = await axios.get(`http://localhost:3001/api/inventory`)
+        const resp = await axios.get(`${BASE_URL}/inventory`)
         setShowInventory(resp.data.inventory)     
     }
 
