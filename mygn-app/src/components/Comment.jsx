@@ -17,7 +17,7 @@ export default function Comment(props) {
         
         const timeout = setTimeout (()=> {
             setShow(true)
-        }, 200)
+        }, 400)
         
 
         return () => clearTimeout(timeout)

@@ -18,6 +18,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />
         <Route exact path="/search" component={Search} />
+
         <Route
           path="/details/:id"
           component={(props) => <BookDetails {...props} />}

@@ -23,8 +23,7 @@ export default function Inventory() {
                 <div key={idx} className="book-card">
                     <h3>{book.title}</h3>
                     <img src={book.image} alt={book.name} />
-                    <p>Remove from Wish List</p>
-                    <p>Remove from Inventory</p>
+                    
                 </div>
             ))}   
         </div>

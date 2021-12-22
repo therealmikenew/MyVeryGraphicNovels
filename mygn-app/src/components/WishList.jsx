@@ -28,12 +28,6 @@ export default function WishList(props) {
                 <div key={idx} className="book-card">
                     <h3>{book.title}</h3>
                     <img src={book.image} alt={book.name} />
-                    <div>COMMENTS HERE</div>
-
-                
-                    
-                    <p>Remove from Wish List</p>
-                    <p>Remove from Inventory</p>
                 </div>
             ))}   
 
