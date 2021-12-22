@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, {useState} from 'react'
-import SearchResults from './SearchResults'
-import RandomResult from "./RandomResult"
+import SearchResults from "../components/SearchResults"
+import RandomResult from "../components/RandomResult"
 
 export default function Search(props) {
     
@@ -34,7 +34,6 @@ export default function Search(props) {
         let test = newArr[Math.floor(Math.random() * newArr.length)]
         let testone = await axios.get(`http://localhost:3001/api/books/${test}`)
         setDisplayRandom(testone.data.bookID)
-        console.log(displayRandom)
     }
 
     return (

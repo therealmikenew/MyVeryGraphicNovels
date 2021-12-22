@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, {useState, useEffect } from 'react'
-import Comment from './Comment'
+import Comment from '../components/Comment'
 
 export default function BookDetails(props) {
     const [bookData, setBookData] = useState("")

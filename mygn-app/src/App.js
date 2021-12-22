@@ -2,12 +2,12 @@ import "./App.css";
 import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import NavBar from "./components/NavBar";
-import Home from "./components/Home";
-import About from "./components/About";
-import Search from "./components/Search";
-import WishList from "./components/WishList";
-import Inventory from "./components/Inventory";
-import BookDetails from "./components/BookDetails";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Search from "../src/pages/Search";
+import WishList from "../src/pages/WishList";
+import Inventory from "../src/pages/Inventory";
+import BookDetails from "../src/pages/BookDetails";
 
 function App() {
   const [update, setUpdate] = useState(true);
