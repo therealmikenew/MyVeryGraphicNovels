@@ -1,15 +1,11 @@
-
 import React from 'react'
 
 export default function BookCard(props) {
-
-    
+ 
     const showBook = (id) => {
         props.props.props.history.push(`/details/${id}`)
     }
-
-
-
+    
     return (
         <div >
             {props.displayGenre.map((book, idx)=> ( 
