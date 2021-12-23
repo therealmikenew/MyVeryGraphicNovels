@@ -188,6 +188,48 @@ const main = async () => {
       onWishList: false,
       onInventory: false,
     },
+    {
+      title: "Is That All There Is?",
+      image:
+        "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1358734876l/12419908.jpg",
+      author: "Swarte, Joose",
+      publisher: "Fantagraphics",
+      volume: null,
+      description:
+        "By appropriating and subverting Tintin creator Herge s classic clear line style, Joost Swarte revitalized European alternative comics in the 1970s with a series of satirical, musically elegant, supremely beautifully drawn short stories often featuring his innocent, magnificently-quiffed Jopo de Pojo, or his orotund scientist character, Anton Makassar. Under Swarte s own exacting supervision, Is That All There Is? will collect virtually all of his alternative comics work from 1972 to date, including the RAW magazine stories that brought him fame among American comics aficionados in the 1980s. Especially great pains will be taken to match Swarte s superb coloring, which includes stories executed in watercolor, comics printed in retro duotones, fiendishly clever use of Zip-a-Tone screens, and much more. (There s even a story about how to color comics art using those screens, with Makassar as the teacher.) Other noteworthy stories include Swarte s take on an episode from Herge s early days, a Fats Domino story, a tribute to the legendary Upside-Downs strip, and a story titled simply Modern Art.",
+      genre: "indie",
+      comments: "",
+      onWishList: false,
+      onInventory: false,
+    },
+    {
+      title: "A Girl Walks Home Alone At Night, Vol. 1",
+      image:
+        "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1613558011l/57105756._SY475_.jpg",
+      author: "Amirpour, Ana Lily",
+      publisher: "Behemoth",
+      volume: 1,
+      description:
+        "Written by the director of the film of the same name rated 96% certified fresh on Rotten Tomatoes, strange things are afoot in Bad City. The Iranian ghost town, home to prostitutes, junkies, pimps and other sordid souls, is a bastion of depravity and hopelessness where a lonely vampire, The Girl, stalks the town's most unsavory inhabitants. Collects the first two stories.",
+      genre: "horror",
+      comments: "",
+      onWishList: false,
+      onInventory: false,
+    },
+    {
+      title: "Batman: The Dark Knight Returns",
+      image:
+        "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327892039l/59960.jpg",
+      author: "Miller, Frank",
+      publisher: "DC Comics",
+      volume: null,
+      description:
+        "This masterpiece of modern comics storytelling brings to vivid life a dark world and an even darker man. Together with inker Klaus Janson and colorist Lynn Varley, writer/artist Frank Miller completely reinvents the legend of Batman in his saga of a near-future Gotham City gone to rot, ten years after the Dark Knight's retirement.",
+      genre: "superhero",
+      comments: "",
+      onWishList: false,
+      onInventory: false,
+    },
   ];
 
   await Book.insertMany(books);

@@ -21,12 +21,13 @@ export default function WishList(props) {
     return (
         <div>
             <h1>Wish List</h1>
-            {showWishList.map((book, idx)=> ( 
-                <div key={idx} className="book-card">
+            <div className="wishlist-container">{showWishList.map((book, idx)=> ( 
+                <div key={idx} className="wishlist-book-card">
                     <h3>{book.title}</h3>
-                    <img onClick={()=> showBook(book._id)}src={book.image} alt={book.name} />
+                    <img className="wishlist-image" onClick={()=> showBook(book._id)}src={book.image} alt={book.name} />
                 </div>
-            ))}   
+            ))} </div>
+              
 
 
         </div>

@@ -3,6 +3,7 @@
 body {
   /* background-image: url("../styles/images/IMG-5988.jpg");
   background-size: contain; */
+  font-family: "Poppins", sans-serif;
 }
 
 .nav-bar {
@@ -73,6 +74,20 @@ body {
   max-width: 300px;
 }
 
-.book-card-detail-image {
+.book-card-detail-image,
+.wishlist-image,
+.inventory-image {
   max-width: 400px;
+}
+
+.wishlist-container,
+.inventory-container {
+  border: 3px solid red;
+}
+
+.wishlist-book-card,
+.inventory-book-card {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

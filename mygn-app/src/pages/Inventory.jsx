@@ -21,13 +21,14 @@ export default function Inventory(props) {
     return (
         <div>
             <h1>Inventory</h1>
-            {showInventory.map((book, idx)=> ( 
-                <div key={idx} className="book-card">
+            <div className="inventory-container">{showInventory.map((book, idx)=> ( 
+                <div key={idx} className="inventory-book-card">
                     <h3>{book.title}</h3>
-                    <img onClick={()=> showBook(book._id)}src={book.image} alt={book.name} />
+                    <img className="inventory-image" onClick={()=> showBook(book._id)}src={book.image} alt={book.name} />
                     
                 </div>
-            ))}   
+            ))} </div>
+              
         </div>
     )
 }
