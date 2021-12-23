@@ -47,17 +47,19 @@ export default function Comment(props) {
 
     return (
         <div>
-            <div>
+            <div className="user-comments">
                 {displayComments.map((com, idx)=> (
-                    <div key={idx}><li >{com.body}</li>
+                    <div className="comment-item" key={idx}><li >{com.body}</li>
                     <button onClick={()=> deleteComment(com._id)}>remove</button></div>
                 ))}
                 </div> 
-             <form onSubmit={submitComment}>
-                    <label>Comments</label>
+
+                <div className="user-comments-form"><form onSubmit={submitComment}>
+                    <label>Notes</label>
                     <input type="text" onChange={handleChange}></input>
                     <input type="submit"></input>
-                </form>
+                </form></div>
+             
         </div>
     )
 }

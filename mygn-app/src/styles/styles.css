@@ -4,23 +4,37 @@ body {
   /* background-image: url("../styles/images/IMG-5988.jpg");
   background-size: contain; */
   font-family: "Poppins", sans-serif;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .nav-bar {
-  background-color: blueviolet;
+  border: 1px solid rgb(0, 196, 7);
+  width: 100%;
+  background-color: #48cae4;
+  height: 200px;
 }
 
 .nav-bar-title {
   font-size: 50px;
   color: black;
   font-family: "Poppins", sans-serif;
+  border: 1px solid rgb(0, 196, 7);
+}
+
+.nav-links-container {
 }
 
 .nav-links {
   display: flex;
-  justify-content: flex-end;
-  text-decoration: none;
-  padding: 20px;
+  align-items: flex-end;
+  border: 1px solid rgb(196, 10, 0);
+  list-style-type: none;
+}
+
+.nav-links li {
+  border: 1px solid rgb(0, 196, 7);
 }
 
 .search-title {
@@ -89,5 +103,18 @@ body {
 .inventory-book-card {
   text-align: center;
   padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.comment-item {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  border: 1px solid red;
+  padding: 5px;
+}
+
+.user-comments,
+.user-comments-form {
   padding-bottom: 10px;
 }
