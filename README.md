@@ -1,6 +1,8 @@
 # My Very Graphic Novels
 
-![Graphic Novels](https://pyxis.nymag.com/v1/imgs/a2a/2f4/32b64b1fa48f6c60066c751f07d640dca8-21-will-eisner-lede.rsquare.w350.jpg)
+![BookDetail component](mygn-app/src/styles/images/screenshot_2.png)
+
+![Search functionality](mygn-app/src/styles/images/screenshot_1.png)
 
 ## 12/23/2021
 
@@ -63,7 +65,5 @@ Then, `cd` into `mygn-app` and run:
 ---
 
 ### **_Credits_**
-
-Art by Will Eisner; from [Vulture](https://www.vulture.com/2015/10/will-eisner-graphic-novels-paul-levitz.html)
 
 Information on the graphic novels and comics come from [Goodreads](https://www.goodreads.com/). Any errors are mine. For requests to change information, contact me via my [LinkedIn](https://www.linkedin.com/in/therealmichaelnewman/).
