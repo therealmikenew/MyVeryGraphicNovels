@@ -59,11 +59,7 @@ export default function Search(props) {
                 <button type="submit">Find me a random graphic novel!</button>
             </form></div>
 
-            
-
-
-
-            <div>
+            <div className='results-container'>
                 <SearchResults displayGenre={displayGenre} props={props} selectedGenre={selectedGenre} handleSubmit={handleSubmit} toggleUpdate={toggleUpdate}/>
                 <RandomResult displayRandom={displayRandom} props={props} />
             </div> 

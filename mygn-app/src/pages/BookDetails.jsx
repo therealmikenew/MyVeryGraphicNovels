@@ -9,13 +9,10 @@ export default function BookDetails(props) {
     const [inventoryStatus, setInventoryStatus] = useState([])
     const [show, setShow] = useState(false)
  
-
     const displayDetails = async () => {
         const resp = await axios.get(`${BASE_URL}/books/${props.match.params.id}`)
         setBookData(resp.data.bookID)
     }
-
-  
 
     useEffect(() => {
             
@@ -47,12 +44,15 @@ export default function BookDetails(props) {
     return (
         <div>
             <div className='book-card-detail'>
-                <h3>{bookData.title}</h3>
-                <img src={bookData.image} alt={bookData.title} />
-                <p>{bookData.description}</p>
+
+                <div className='book-card-detail-a'><h3>{bookData.title}</h3>
+                <img className="book-card-detail-image" src={bookData.image} alt={bookData.title} /></div>
+                <div className='book-card-detail-b'><p>{bookData.description}</p>
                 <Comment bookData={bookData} handleUpdate={props.handleUpdate}/>  
                 <button onClick={()=> toggleWishList(bookData._id, bookData.onWishList)}>{wishListStatus ? "Remove from WishList" : "Add to WishList"}</button>
-                <button onClick={()=> toggleInventory(bookData._id, bookData.onInventory)}>{inventoryStatus ? "Remove from Inventory" : "Add to Inventory"}</button>
+                <button onClick={()=> toggleInventory(bookData._id, bookData.onInventory)}>{inventoryStatus ? "Remove from Inventory" : "Add to Inventory"}</button></div>
+                
+                
             </div>
     </div>)
 }

@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
 
 body {
-  background-color: rgb(218, 198, 237);
+  /* background-image: url("../styles/images/IMG-5988.jpg");
+  background-size: contain; */
 }
 
 .nav-bar {
@@ -10,7 +11,7 @@ body {
 
 .nav-bar-title {
   font-size: 50px;
-  color: white;
+  color: black;
   font-family: "Poppins", sans-serif;
 }
 
@@ -36,17 +37,42 @@ body {
 }
 .book-card-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid black;
+  max-width: 500px;
 }
 .book-card {
   text-align: center;
   align-items: center;
   border: 1px solid black;
-  max-width: 300px;
+  max-width: 1000px;
   padding-bottom: 20px;
   margin-bottom: 10px;
 }
 
 .book-card-image {
   max-width: 200px;
+}
+
+.results-container {
+  display: flex;
+  justify-content: space-around;
+  border: 3px solid red;
+}
+
+.book-card-detail {
+  border: 3px solid red;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.book-card-detail-a {
+  max-width: 200px;
+}
+.book-card-detail-b {
+  max-width: 300px;
+}
+
+.book-card-detail-image {
+  max-width: 400px;
 }

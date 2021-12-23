@@ -9,10 +9,9 @@ export default function RandomResult(props) {
     }
     return (
         <div className='search-container'>
-        
-        <div >
+        <div className='book-card'>
             <h3>{props.displayRandom.title}</h3>
-            <img onClick={() => showBook(props.displayRandom._id)} src={props.displayRandom.image} alt={props.displayRandom.title} />
+            <img className="book-card-image" onClick={() => showBook(props.displayRandom._id)} src={props.displayRandom.image} alt={props.displayRandom.title} />
             
         </div>
         
