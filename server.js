@@ -10,18 +10,12 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-///////middleware
-
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(logger("dev"));
 
-///////////
-
 app.use("/api", routes);
-
-//////////////
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "client/build")));
@@ -29,8 +23,6 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.join(`${__dirname}/client/build/index.html`));
   });
 }
-
-/////////////
 
 app.listen(PORT, () => {
   console.log(`Express serve listening on port ${PORT}`);

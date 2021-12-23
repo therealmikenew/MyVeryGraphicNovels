@@ -1,4 +1,3 @@
-// import "./index.css";
 import "./styles/styles.css";
 import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";

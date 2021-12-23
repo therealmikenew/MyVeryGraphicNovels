@@ -5,7 +5,6 @@ import SearchResults from "../components/SearchResults"
 import RandomResult from "../components/RandomResult"
 
 export default function Search(props) {
-    
     const [selectedGenre, setSelectedGenre] = useState({value: "superhero"})
     const [displayGenre, setDisplayGenre] = useState([])
     const [displayRandom, setDisplayRandom] = useState([])

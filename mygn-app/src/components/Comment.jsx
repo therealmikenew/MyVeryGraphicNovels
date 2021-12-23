@@ -3,7 +3,6 @@ import globals, { BASE_URL } from "../globals"
 import React, {useState, useEffect} from 'react'
 
 export default function Comment(props) {
-    console.log(props.handleUpdate)
     const [getComment, setGetComment] = useState("")
     const [displayComments, setDisplayComments] = useState([])
     const [show, setShow] = useState(false)
@@ -15,7 +14,7 @@ export default function Comment(props) {
 
     useEffect(() => {
         getComments()
-        
+        //Because of a lag time in getting comments to render immediately, the timeout fucntion gives a slight delay to allow displayComment to get populated with comments data
         const timeout = setTimeout (()=> {
             setShow(true)
         }, 400)
@@ -37,12 +36,9 @@ export default function Comment(props) {
         })
     }
 
-
     const deleteComment = async (id) => {
-        
        await axios.delete(`http://localhost:3001/api/comments/${id}`)
        props.handleUpdate()
- 
     }
 
     return (
@@ -53,13 +49,13 @@ export default function Comment(props) {
                     <button className="remove-btn" onClick={()=> deleteComment(com._id)}>Remove</button></div>
                 ))}
                 </div> 
-
-                <div className="user-comments-form"><form onSubmit={submitComment}>
-                    <label>Notes</label>
-                    <input type="text" onChange={handleChange}></input>
-                    <input type="submit"></input>
-                </form></div>
-             
+                <div className="user-comments-form">
+                    <form onSubmit={submitComment}>
+                        <label>Notes</label>
+                        <input type="text" onChange={handleChange}></input>
+                        <input type="submit"></input>
+                    </form>
+                </div>  
         </div>
     )
 }

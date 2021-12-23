@@ -19,6 +19,7 @@ export default function BookDetails(props) {
        const timeout = setTimeout (()=> {
              setShow(true)
          }, 400)
+         //Because of a lag time in getting data from displayDetails, the timeout fucntion gives a slight delay to allow bookData to get data
          displayDetails()
          setWishListStatus(bookData.onWishList)
          setInventoryStatus(bookData.onInventory)
@@ -44,15 +45,16 @@ export default function BookDetails(props) {
     return (
         <div>
             <div className='book-card-detail'>
-
                 <div className='book-card-detail-a'><h3>{bookData.title}</h3>
-                <img className="book-card-detail-image" src={bookData.image} alt={bookData.title} /></div>
-                <div className='book-card-detail-b'><p>{bookData.description}</p>
-                <Comment bookData={bookData} handleUpdate={props.handleUpdate}/>  
-                <button className="add-btn" onClick={()=> toggleWishList(bookData._id, bookData.onWishList)}>{wishListStatus ? "Remove from WishList" : "Add to WishList"}</button>
-                <button className="add-btn" onClick={()=> toggleInventory(bookData._id, bookData.onInventory)}>{inventoryStatus ? "Remove from Inventory" : "Add to Inventory"}</button></div>
-                
-                
+                    <img className="book-card-detail-image" src={bookData.image} alt={bookData.title} />
+                </div>
+                <div className='book-card-detail-b'>
+                    <p>{bookData.description}</p>
+                    <Comment bookData={bookData} handleUpdate={props.handleUpdate}/>  
+                    <button className="add-btn" onClick={()=> toggleWishList(bookData._id, bookData.onWishList)}>{wishListStatus ? "Remove from WishList" : "Add to WishList"}</button>
+                    <button className="add-btn" onClick={()=> toggleInventory(bookData._id, bookData.onInventory)}>{inventoryStatus ? "Remove from Inventory" : "Add to Inventory"}</button>
+                </div>
             </div>
-    </div>)
+    </div>
+    )
 }
