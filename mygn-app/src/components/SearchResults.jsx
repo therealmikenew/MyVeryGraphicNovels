@@ -4,7 +4,7 @@ import BookCard from './BookCard'
 
 export default function SearchResults(props) {
     return (
-        <div className="search-container">
+        <div >
             <BookCard displayGenre={props.displayGenre} props={props}/>
         </div>
     )

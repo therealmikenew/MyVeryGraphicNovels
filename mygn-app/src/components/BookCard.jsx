@@ -7,11 +7,11 @@ export default function BookCard(props) {
     }
     
     return (
-        <div >
+        <div className='book-card-container'>
             {props.displayGenre.map((book, idx)=> ( 
                 <div key={idx} className="book-card" >
                     <h3>{book.title}</h3>
-                    <img onClick={() => showBook(book._id)} src={book.image} alt={book.name} />
+                    <img className="book-card-image" onClick={() => showBook(book._id)} src={book.image} alt={book.name} />
                   
                 </div>
                 

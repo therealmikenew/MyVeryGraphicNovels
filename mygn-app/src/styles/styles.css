@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+body {
+  background-color: rgb(218, 198, 237);
+}
+
+.nav-bar {
+  background-color: blueviolet;
+}
+
+.nav-bar-title {
+  font-size: 50px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.search-title {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.search-genre {
+  text-align: center;
+  padding: 20px;
+}
+
+.search-random {
+  text-align: center;
+}
+.book-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.book-card {
+  text-align: center;
+  align-items: center;
+  border: 1px solid black;
+  max-width: 300px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.book-card-image {
+  max-width: 200px;
+}

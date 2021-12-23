@@ -40,7 +40,6 @@ export default function BookDetails(props) {
 
     const toggleInventory = async (id, onInventory) => {
         let changeBook = await axios.put(`${BASE_URL}/inventory/${id}/${!onInventory}`)
-        //console.log("front end:", onInventory, "backend:", changeBook.data.update.onInventory)
         setInventoryStatus(changeBook.data.update.onInventory)
         props.handleUpdate()   
     }

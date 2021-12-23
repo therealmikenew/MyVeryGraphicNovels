@@ -1,10 +1,11 @@
+import "../styles/styles.css"
 import React from 'react'
 import {Link} from "react-router-dom"
 
 export default function NavBar() {
     return (
-        <nav>
-            <h3>My Very Graphic Novels</h3>
+        <nav className='nav-bar'>
+            <h3 className="nav-bar-title">My Very Graphic Novels</h3>
             <div className="nav-links">
                 <Link to="/">Home</Link>
                 <Link to="/about">About</Link>

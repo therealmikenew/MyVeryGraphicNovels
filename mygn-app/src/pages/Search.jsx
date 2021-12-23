@@ -39,9 +39,11 @@ export default function Search(props) {
 
     return (
         <div>
-            <h1>Search</h1>
+            <div className='search-title'><h1 >Search</h1>
+            <p>Discover a new graphic novel by selecting genre. Or find a random selection!</p></div>
+            
 
-            <form onSubmit={handleSubmit}>
+            <div className='search-genre'> <form onSubmit={handleSubmit}>
             <select id="search" onChange={handleChange}>
                 <option value="superhero">superhero</option>
                 <option value="fantasy">fantasy</option>
@@ -51,11 +53,13 @@ export default function Search(props) {
                 <option value="suspense">suspense</option>
             </select >
                 <button type='submit'>Search</button>
-            </form>
+            </form></div>
 
-            <form onSubmit={randomFind}>
-                <button type="submit">Find Something Random</button>
-            </form>
+           <div className='search-random'><form onSubmit={randomFind}>
+                <button type="submit">Find me a random graphic novel!</button>
+            </form></div>
+
+            
 
 
 
