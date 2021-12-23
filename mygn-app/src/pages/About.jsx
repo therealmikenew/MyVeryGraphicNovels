@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function About() {
     return (
-        <div>
+        <div className='about-container'>
             <h1>About</h1>
 
             <h2>What's a graphic novel? What's the difference between a graphic novel and comic book?</h2>

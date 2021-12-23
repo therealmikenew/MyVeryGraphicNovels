@@ -19,7 +19,7 @@ export default function WishList(props) {
     },[] )
 
     return (
-        <div>
+        <div className="wishlist-container-main">
             <h1>Wish List</h1>
             <div className="wishlist-container">{showWishList.map((book, idx)=> ( 
                 <div key={idx} className="wishlist-book-card">

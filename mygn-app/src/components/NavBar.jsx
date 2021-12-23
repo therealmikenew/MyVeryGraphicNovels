@@ -8,11 +8,11 @@ export default function NavBar() {
             <h3 className="nav-bar-title">My Very Graphic Novels</h3>
             <div className="nav-links-container">
                 <ul className="nav-links">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/search">Search</Link></li>
-                    <li><Link to="/wishlist">Wish List</Link></li>
-                    <li> <Link to="/inventory">Inventory</Link></li>
+                    <li className="link"><Link to="/" style={{color: "whitesmoke", textDecoration: 'none'}} >Home</Link></li>
+                    <li className="link"><Link to="/about" style={{color: "whitesmoke", textDecoration: 'none'}}>About</Link></li>
+                    <li className="link"><Link to="/search" style={{color: "whitesmoke", textDecoration: 'none'}}>Search</Link></li>
+                    <li className="link"><Link to="/wishlist" style={{color: "whitesmoke", textDecoration: 'none'}}>Wish List</Link></li>
+                    <li className="link"> <Link to="/inventory" style={{color: "whitesmoke", textDecoration: 'none'}}>Inventory</Link></li>
                 </ul>
                
             </div>

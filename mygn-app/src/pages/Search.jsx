@@ -38,7 +38,7 @@ export default function Search(props) {
     }
 
     return (
-        <div>
+        <div className='search-container'>
             <div className='search-title'><h1 >Search</h1>
             <p>Discover a new graphic novel by selecting genre. Or find a random selection!</p></div>
             
@@ -56,7 +56,7 @@ export default function Search(props) {
             </form></div>
 
            <div className='search-random'><form onSubmit={randomFind}>
-                <button type="submit">Find me a random graphic novel!</button>
+                <button className="random-btn" type="submit">Find me a random graphic novel!</button>
             </form></div>
 
             <div className='results-container'>

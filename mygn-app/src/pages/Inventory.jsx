@@ -19,7 +19,7 @@ export default function Inventory(props) {
     }, [])
 
     return (
-        <div>
+        <div className="inventory-container-main">
             <h1>Inventory</h1>
             <div className="inventory-container">{showInventory.map((book, idx)=> ( 
                 <div key={idx} className="inventory-book-card">

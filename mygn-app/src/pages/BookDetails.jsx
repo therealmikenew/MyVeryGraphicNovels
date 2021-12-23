@@ -49,8 +49,8 @@ export default function BookDetails(props) {
                 <img className="book-card-detail-image" src={bookData.image} alt={bookData.title} /></div>
                 <div className='book-card-detail-b'><p>{bookData.description}</p>
                 <Comment bookData={bookData} handleUpdate={props.handleUpdate}/>  
-                <button onClick={()=> toggleWishList(bookData._id, bookData.onWishList)}>{wishListStatus ? "Remove from WishList" : "Add to WishList"}</button>
-                <button onClick={()=> toggleInventory(bookData._id, bookData.onInventory)}>{inventoryStatus ? "Remove from Inventory" : "Add to Inventory"}</button></div>
+                <button className="add-btn" onClick={()=> toggleWishList(bookData._id, bookData.onWishList)}>{wishListStatus ? "Remove from WishList" : "Add to WishList"}</button>
+                <button className="add-btn" onClick={()=> toggleInventory(bookData._id, bookData.onInventory)}>{inventoryStatus ? "Remove from Inventory" : "Add to Inventory"}</button></div>
                 
                 
             </div>

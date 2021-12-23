@@ -50,7 +50,7 @@ export default function Comment(props) {
             <div className="user-comments">
                 {displayComments.map((com, idx)=> (
                     <div className="comment-item" key={idx}><li >{com.body}</li>
-                    <button onClick={()=> deleteComment(com._id)}>remove</button></div>
+                    <button className="remove-btn" onClick={()=> deleteComment(com._id)}>Remove</button></div>
                 ))}
                 </div> 
 
