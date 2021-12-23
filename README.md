@@ -66,4 +66,4 @@ Then, `cd` into `mygn-app` and run:
 
 ### **_Credits_**
 
-Information on the graphic novels and comics come from [Goodreads](https://www.goodreads.com/). Any errors are mine. For requests to change information, contact me via my [LinkedIn](https://www.linkedin.com/in/therealmichaelnewman/).
+Information on the graphic novels and comics comes from [Goodreads](https://www.goodreads.com/). Any errors are mine. For requests to change information, contact me via my [LinkedIn](https://www.linkedin.com/in/therealmichaelnewman/).
