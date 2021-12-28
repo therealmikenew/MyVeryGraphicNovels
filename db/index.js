@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
-require("dotenv").config({ path: "./.env" });
+require("dotenv").config();
+//require("dotenv").config({ path: "./.env" });
 
 let dbUrl =
   process.env.NODE_ENV === "production"
@@ -10,6 +11,7 @@ mongoose
   .connect(dbUrl, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
+    useFindAndModify: true,
   })
   .then(() => {
     console.log("Successfully connected to MongoDB.");
