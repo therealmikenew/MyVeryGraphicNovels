@@ -5,7 +5,8 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const db = require("./db");
 const path = require("path");
-require("dotenv").config({ path: "./.env" });
+require("dotenv").config();
+//require("dotenv").config({ path: "./.env" });
 
 const PORT = process.env.PORT || 3001;
 
@@ -19,9 +20,9 @@ app.use(logger("dev"));
 app.use("/api", routes);
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "mygn-app/public")));
+  app.use(express.static(path.join(__dirname, "mygn-app/build")));
   app.get("*", (req, res) => {
-    res.sendFile(path.join(`${__dirname}/mygn-app/public/index.html`));
+    res.sendFile(path.join(`${__dirname}/mygn-app/build/index.html`));
   });
 }
 
