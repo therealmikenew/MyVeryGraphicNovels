@@ -4,10 +4,10 @@ import { Route, Switch } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Search from "../src/pages/Search";
-import WishList from "../src/pages/WishList";
-import Inventory from "../src/pages/Inventory";
-import BookDetails from "../src/pages/BookDetails";
+import Search from "./pages/Search";
+import WishList from "./pages/WishList";
+import Inventory from "./pages/Inventory";
+import BookDetails from "./pages/BookDetails";
 
 function App() {
   const [update, setUpdate] = useState(true);
