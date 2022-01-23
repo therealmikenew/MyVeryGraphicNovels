@@ -1,6 +1,13 @@
 {
   "name": "server",
   "version": "0.1.0",
+  "configurations": {
+    "env": {
+      "NODE_ENV": "production"
+    }
+  },
+
+  
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
