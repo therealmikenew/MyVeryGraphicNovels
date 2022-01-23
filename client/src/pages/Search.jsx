@@ -39,7 +39,7 @@ export default function Search(props) {
     return (
         <div className='search-container'>
             <div className='search-title'><h1 >Search</h1>
-            <p>Discover a new graphic novel by selecting genre. Or find a random selection!</p></div>
+            <p>Discover a new graphic novel by selecting genre. Or find a random selection!!!</p></div>
             
 
             <div className='search-genre'> <form onSubmit={handleSubmit}>
