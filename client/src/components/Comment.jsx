@@ -1,5 +1,5 @@
 import axios from "axios"
-import globals, { BASE_URL } from "../globals"
+import { BASE_URL } from "../globals"
 import React, {useState, useEffect} from 'react'
 
 export default function Comment(props) {
@@ -30,14 +30,14 @@ export default function Comment(props) {
     }
 
     const submitComment = async (e) => {
-        await axios.post("http://localhost:3001/api/wishlist/comment", {
+        await axios.post(`${BASE_URL}/wishlist/comment`, {
             body: `${getComment}`,
             book_id: `${props.bookData._id}`,
         })
     }
 
     const deleteComment = async (id) => {
-       await axios.delete(`http://localhost:3001/api/comments/${id}`)
+       await axios.delete(`${BASE_URL}/comments/${id}`)
        props.handleUpdate()
     }
 

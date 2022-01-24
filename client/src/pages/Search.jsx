@@ -1,5 +1,5 @@
 import axios from 'axios'
-import globals, { BASE_URL } from "../globals"
+import { BASE_URL } from "../globals"
 import React, {useState} from 'react'
 import SearchResults from "../components/SearchResults"
 import RandomResult from "../components/RandomResult"

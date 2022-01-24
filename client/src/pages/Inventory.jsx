@@ -1,5 +1,5 @@
 import axios from "axios"
-import globals, { BASE_URL } from "../globals"
+import { BASE_URL } from "../globals"
 import React, {useState, useEffect} from 'react'
 
 export default function Inventory(props) {
