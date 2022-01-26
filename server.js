@@ -5,8 +5,6 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const db = require("./db");
 const path = require("path");
-//require("dotenv").config();
-//require("dotenv").config({ path: "./.env" });
 
 const PORT = process.env.PORT || 3001;
 
@@ -19,12 +17,12 @@ app.use(logger("dev"));
 
 app.use("/api", routes);
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "client/build")));
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(`${__dirname}/client/build/index.html`));
-  });
-}
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join(__dirname, "client/build")));
+//   app.get("*", (req, res) => {
+//     res.sendFile(path.join(`${__dirname}/client/build/index.html`));
+//   });
+// }
 
 app.listen(PORT, () => {
   console.log(`Express serve listening on port ${PORT}`);
