@@ -1,8 +1,6 @@
 {
   "name": "server",
   "version": "0.1.0",
-  
-  
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
@@ -26,7 +24,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "cd client && rm -rf build && npm install && npm run build",
-    "test": "react-scripts test",
+    "test": "NODE_ENV=production",
     "eject": "react-scripts eject",
     "dev": "concurrently \"nodemon server.js\" \"cd ./client && npm start \""
   },
@@ -52,5 +50,8 @@
   "main": "server.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
 }
