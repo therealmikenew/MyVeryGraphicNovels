@@ -26,6 +26,12 @@ body {
   margin-left: 10px;
 }
 
+@media screen and (max-width: 800px) {
+  .nav-bar-title {
+    font-size: 30px;
+  }
+}
+
 .nav-links {
   display: flex;
   align-items: flex-end;
@@ -70,6 +76,14 @@ body {
 
 .remove-btn:hover {
   background-color: #003957;
+}
+
+@media screen and (max-width: 800px) {
+  .about-container {
+    font-size: 15px;
+    margin-right: 10px;
+    padding-right: 10px;
+  }
 }
 
 .home-container,
@@ -145,6 +159,15 @@ body {
   background-color: whitesmoke;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  .book-card-detail {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
 }
 
 .wishlist-container-main,
