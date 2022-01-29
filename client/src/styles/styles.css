@@ -161,10 +161,12 @@ body {
   padding-bottom: 20px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .book-card-detail {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 }
 
