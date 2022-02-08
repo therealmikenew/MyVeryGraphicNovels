@@ -31,6 +31,8 @@
 
 ### **_Getting Started_**
 
+Deployed to Heroku [https://myverygraphicnovels.herokuapp.com/](https://myverygraphicnovels.herokuapp.com/)
+
 - `Fork` and `clone` this repository
 - `cd` into the project directory on your local machine
 
@@ -60,7 +62,7 @@ Then, `cd` into `mygn-app` and run:
 ### **_Future tasks_**
 
 - Create functionality so users can enter search terms, ie, enter title, author, etc
-- Create login functionality so users can create accounts and profiles
+- Enable OAuth
 
 ---
 
