@@ -31,6 +31,8 @@
 
 ### **_Getting Started_**
 
+Deployed to Heroku [https://myverygraphicnovels.herokuapp.com/](https://myverygraphicnovels.herokuapp.com/)
+
 - `Fork` and `clone` this repository
 - `cd` into the project directory on your local machine
 
