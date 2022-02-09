@@ -1,8 +1,8 @@
 # My Very Graphic Novels
 
-![BookDetail component](mygn-app/src/styles/images/screenshot_2.png)
+![BookDetail component](client/src/styles/images/screenshot_1.png)
 
-![Search functionality](mygn-app/src/styles/images/screenshot_1.png)
+![Search functionality](client/src/styles/images/screenshot_2.png)
 
 ## 12/23/2021
 
@@ -47,10 +47,10 @@ Then, `cd` into `mygn-app` and run:
 
 ### `npm start`
 
-- Runs the app in the development mode.\
+- Runs the app in the development mode.
 - Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-- The page will reload when you make changes.\
+- The page will reload when you make changes.
 - You may also see any lint errors in the console.
 
 #### A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/XbMC6STN/my-very-graphic-novels).
@@ -60,7 +60,7 @@ Then, `cd` into `mygn-app` and run:
 ### **_Future tasks_**
 
 - Create functionality so users can enter search terms, ie, enter title, author, etc
-- Create login functionality so users can create accounts and profiles
+- Enable OAuth
 
 ---
 
